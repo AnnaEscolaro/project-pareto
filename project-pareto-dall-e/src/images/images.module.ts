@@ -7,6 +7,6 @@ import { Images } from './images.entity';
 @Module({
   imports: [SequelizeModule.forFeature([Images])],
   controllers: [ImagesController],
-  providers: [ImagesService]
+  providers: [ImagesService],
 })
 export class ImagesModule {}

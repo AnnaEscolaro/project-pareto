@@ -15,7 +15,7 @@ exports.OpenaiModule = OpenaiModule = __decorate([
     (0, common_1.Global)(),
     (0, common_1.Module)({
         providers: [openai_service_1.OpenaiService],
-        exports: [openai_service_1.OpenaiService]
+        exports: [openai_service_1.OpenaiService],
     })
 ], OpenaiModule);
 //# sourceMappingURL=openai.module.js.map

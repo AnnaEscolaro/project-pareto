@@ -6,27 +6,27 @@ import { OpenaiService } from 'src/openai/openai.service';
 @Injectable()
 export class ImagesService {
   constructor(
-    @InjectModel(Images) 
+    @InjectModel(Images)
     private imageModel: typeof Images,
-    private readonly openAiService: OpenaiService,      
-    ) {}
+    private readonly openAiService: OpenaiService,
+  ) {}
 
-  async findAll(): Promise<Images[]> {
+  async findAll(userId): Promise<Images[]> {
     try {
-      return this.imageModel.findAll();
+      return this.imageModel.findAll({
+        where: { userId: userId },
+      });
     } catch (ex) {
       console.error(ex);
     }
   }
-  
+
   async generateImage(prompt: string): Promise<any> {
-    const generatedImage = await this.openAiService.generateImage(prompt);
-    console.log(generatedImage);
-    const record = await this.imageModel.create({
+    const imageUrl = await this.openAiService.generateImage(prompt);
+    await this.imageModel.create({
       prompt: prompt,
-      link: generatedImage,
+      link: imageUrl,
     });
-    console.log(record);
-    return generatedImage;
+    return imageUrl;
   }
 }

@@ -14,8 +14,6 @@ const databaseProviders = [
         database: process.env.MYSQL_DATABASE,
 
       });
-    //   sequelize.addModels([Images]);
-    //   await sequelize.sync();
       return sequelize;
     },
   },

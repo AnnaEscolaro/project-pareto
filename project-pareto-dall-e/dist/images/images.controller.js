@@ -20,8 +20,10 @@ let ImagesController = exports.ImagesController = class ImagesController {
     constructor(imagesService) {
         this.imagesService = imagesService;
     }
-    async getAll() {
-        const result = await this.imagesService.findAll();
+    async getAll(req) {
+        const userId = req.body.userId;
+        console.log(userId);
+        const result = await this.imagesService.findAll(userId);
         return result;
     }
     async generateImage(generateImageDto) {
@@ -31,8 +33,9 @@ let ImagesController = exports.ImagesController = class ImagesController {
 };
 __decorate([
     (0, common_1.Get)(),
+    __param(0, (0, common_1.Request)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
+    __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], ImagesController.prototype, "getAll", null);
 __decorate([

@@ -1,4 +1,4 @@
-import { Table, Column, Model, Sequelize } from 'sequelize-typescript';
+import { Table, Column, Model } from 'sequelize-typescript';
 
 @Table
 export class Images extends Model {
@@ -8,7 +8,7 @@ export class Images extends Model {
   @Column
   prompt: string;
 
-  @Column({type: 'text'})
+  @Column({ type: 'text' })
   link: string;
 
   @Column

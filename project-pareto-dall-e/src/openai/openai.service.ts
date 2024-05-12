@@ -3,18 +3,13 @@ import OpenAIApi from 'openai';
 
 @Injectable()
 export class OpenaiService {
-//   constructor(private readonly openai: OpenAIApi) {
-//     this.openai = new OpenAIApi({
-//       apiKey: process.env.OPEN_AI_PRIVATE_KEY,
-//     });
-//   }
-private readonly openai: OpenAIApi;
+  private readonly openai: OpenAIApi;
 
-constructor() {
-  this.openai = new OpenAIApi({
-    apiKey: process.env.OPEN_AI_PRIVATE_KEY,
-  });
-}
+  constructor() {
+    this.openai = new OpenAIApi({
+      apiKey: process.env.OPEN_AI_PRIVATE_KEY,
+    });
+  }
 
   async generateImage(text: string): Promise<string> {
     try {

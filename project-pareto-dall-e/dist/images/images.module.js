@@ -18,7 +18,7 @@ exports.ImagesModule = ImagesModule = __decorate([
     (0, common_1.Module)({
         imports: [sequelize_1.SequelizeModule.forFeature([images_entity_1.Images])],
         controllers: [images_controller_1.ImagesController],
-        providers: [images_service_1.ImagesService]
+        providers: [images_service_1.ImagesService],
     })
 ], ImagesModule);
 //# sourceMappingURL=images.module.js.map
