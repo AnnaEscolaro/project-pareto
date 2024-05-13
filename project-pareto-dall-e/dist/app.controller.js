@@ -8,7 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+<<<<<<< HEAD
 var _a;
+=======
+>>>>>>> b10d18814150b384bbc2ca260f2edcb49ce9a40a
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppController = void 0;
 const common_1 = require("@nestjs/common");
@@ -20,6 +23,10 @@ let AppController = exports.AppController = class AppController {
 };
 exports.AppController = AppController = __decorate([
     (0, common_1.Controller)(),
+<<<<<<< HEAD
     __metadata("design:paramtypes", [typeof (_a = typeof app_service_1.AppService !== "undefined" && app_service_1.AppService) === "function" ? _a : Object])
+=======
+    __metadata("design:paramtypes", [app_service_1.AppService])
+>>>>>>> b10d18814150b384bbc2ca260f2edcb49ce9a40a
 ], AppController);
 //# sourceMappingURL=app.controller.js.map
